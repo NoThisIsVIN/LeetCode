@@ -1,16 +1,14 @@
 class Solution {
     public List<Boolean> kidsWithCandies(int[] candies, int extraCandies) {
-        
-        int MaxC =0;
-
+        int M=0;
         for (int i = 0; i< candies.length; i++){
-            if (candies[i]> MaxC){
-                MaxC = candies[i];
+            if (candies[i]> M){
+                M=candies[i];
             }
         }
         List<Boolean> result = new ArrayList<>();
         for ( int i = 0; i< candies.length; i++){
-            if(candies[i] + extraCandies >= MaxC){
+            if(candies[i] + extraCandies >=M){
                 result.add(true);
             }else{
                 result.add(false);
