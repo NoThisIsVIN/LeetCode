@@ -3,11 +3,11 @@ class Solution {
 
         int count =0; 
         int max =0;
-        for(int i=0; i<s.length(); i++){
-            if(s.charAt(i) == '('){
+        for(char ch : s.toCharArray()){
+            if(ch == '('){
                 count++;
             }
-             if(s.charAt(i) == ')'){
+             if(ch == ')'){
                 max = Math.max(max,count);
                 count--;
             }
