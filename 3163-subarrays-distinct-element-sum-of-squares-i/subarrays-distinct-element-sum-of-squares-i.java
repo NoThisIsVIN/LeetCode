@@ -3,10 +3,14 @@ class Solution {
 
         int ret = 0;
         for(int i =0; i<nums.size(); i++){
-            HashSet <Integer> set = new HashSet<>();
+            boolean[] visited = new boolean[101];
+            int count =0;
             for(int j =i; j<nums.size(); j++){
-                set.add(nums.get(j));
-                    ret += set.size() * set.size();
+                if(!visited[nums.get(j)]){
+                    visited[nums.get(j)] = true;
+                    count++;
+                }
+                    ret += count * count;
             }
 
         }
